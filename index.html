@@ -197,6 +197,7 @@
         const phone = urlParams.get("phone");
         const userId = urlParams.get("userId");
         const tawkUrl = urlParams.get("url")
+        const sessionId = urlParams.get("sessionId")
 
         function hashInBase64(userId) {
             var hash = CryptoJS.HmacSHA256(userId, secretKey);
@@ -228,8 +229,9 @@
                     // phone: phone
                 }, function (error) {
                     console.log(error, 'my error')
-                    window.location.replace(`https://memox-inc.github.io/containerone/tawk.html?name=${name}&email=${email}&phone=${phone}&userId=${userId}&url=${tawkUrl}`)
+                    window.location.replace(`https://memox-inc.github.io/containerone/tawk.html?name=${name}&email=${email}&phone=${phone}&userId=${userId}&url=${tawkUrl}&sessionId=${sessionId}`);
                 })
+
             }
         }())
     </script>
