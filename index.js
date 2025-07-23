@@ -333,7 +333,7 @@ async function getOrCreateSession() {
 
             },
             body: JSON.stringify({
-                room_name: sessionId,
+                room_name: sessionId.trim(),
                 is_active: true,
                 is_handover: true,
                 visitor: visitorId,
